@@ -1,0 +1,1 @@
+A linguagem JavaScript serve para várias funções tais como; Iteratividade, como pop-ups, Manipulação de objetos com DOM, para validar formularios entre outras coisas.

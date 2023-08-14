@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" onsubmit="return validarForm();">
+        nome <input type="text" name="" id="nome"> <br>
+        senha <input type="text" name="" id="senha"><br>
+        confirmar senha <input type="text" name="" id="confSenha"><br>
+        <button>enviar</button>
+        <div id="divMsg" style="color: red;"></div>
+    </form>
+
+    <script>
+        function validarForm(params) {
+            var nome = document.getElementById('nome').value.trim();
+            var senha = document.getElementById('senha').value.trim();
+            var confSenha = document.getElementById('confSenha').value.trim();
+            
+            var divMsg = document.getElementById('divMsg');
+
+            if(nome == '') {
+            divMsg.innerHTML = "Informe o nome!";
+            return false;
+            }
+
+            else if(senha == '') {
+            divMsg.innerHTML = "Informe a senha!";
+            return false;
+            }
+
+            else if(senha.length < 8){
+                divMsg.innerHTML = "Escolha uma senha com mais de 8 caracteres!";
+                return false;
+            }
+
+            else if (confSenha == '') {
+                divMsg.innerHTML = "Confirme a senha!";
+                return false;
+            }
+
+            else if (confSenha != senha) {
+                divMsg.innerHTML= "Os campos confirmação e senha devem ser identicos!";
+                return false;
+            }
+
+
+            return true;
+        }
+
+
+
+    </script>
+
+</body>
+</html>

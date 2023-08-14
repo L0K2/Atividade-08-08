@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Altere o h1</h1>
+    <button id="cor">Mudar a cor</button><br><br>
+    <button id="titulo">mudar titulo</button><br><br>
+    <button id="tamanho">mudar o tamanho da fonte</button>
+
+    <script>
+        const botaoCor = document.querySelector('#cor');
+
+        const titulo = document.querySelector('#titulo');
+
+        const tamanho = document.querySelector('#tamanho');
+
+
+        botaoCor.addEventListener('click', ()=>{
+            document.querySelector('h1').style.color = 'red';
+        });
+
+        titulo.addEventListener('click', ()=>{
+            document.querySelector('h1').textContent = 'mudou';
+        })
+
+        tamanho.addEventListener('click', ()=>{
+            document.querySelector('h1').style.fontSize = '200px';
+        })
+
+
+    </script>
+</body>
+</html>
